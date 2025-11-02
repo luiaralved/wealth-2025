@@ -3,144 +3,235 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Generational Wealth 2025</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <title>Generational Wealth 2025 | LVED</title>
   <style>
-    body{font-family:Arial,sans-serif;margin:0;padding:20px;background:#f4f4f4}
-    header{background:#007bff;color:#fff;padding:20px;text-align:center}
-    nav{background:#333;padding:10px;text-align:center}
-    nav a{color:#fff;margin:0 15px;text-decoration:none;font-weight:bold}
-    nav a:hover{text-decoration:underline}
-    section{margin:20px 0;padding:20px;background:#fff;border-radius:8px;box-shadow:0 0 10px rgba(0,0,0,.1)}
-    h1,h2{color:#333}
-    .read-btn{background:#007bff;color:#fff;padding:10px 20px;border:none;border-radius:5px;cursor:pointer;font-size:1.1em;margin:10px 0;transition:background .3s}
-    .read-btn:hover{background:#0056b3}
-    ul{list-style:none;padding:0}
-    li{margin:15px 0;padding:15px;border-bottom:1px solid #eee;background:#f9f9f9;border-radius:5px}
-    .title{font-weight:bold;font-size:1.1em}
-    .desc{color:#666;font-size:0.95em;margin:5px 0}
-    .date{color:#999;font-size:0.9em}
-    .source{font-style:italic;color:#007bff}
-    .warning{color:#d9534f}
-    .api-note{font-size:0.8em;color:#999;text-align:center;margin:10px 0}
+    :root {
+      --red-love: #b9002a;
+      --red-dark: #820024;
+      --blue-trust: #00a2ab;
+      --beige: #f2ebe1;
+      --white: #ffffff;
+      --black: #000000;
+    }
+    body {
+      font-family: 'Lato', sans-serif;
+      margin: 0;
+      background: var(--white);
+      color: var(--black);
+      line-height: 1.7;
+    }
+    header {
+      background: linear-gradient(135deg, var(--red-love), var(--red-dark));
+      color: var(--white);
+      padding: 50px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8em;
+      margin: 0;
+      font-weight: 700;
+    }
+    header p {
+      font-size: 1.25em;
+      margin: 12px 0 0;
+      font-weight: 300;
+      opacity: 0.95;
+    }
+    .tagline {
+      font-style: italic;
+      font-size: 1.1em;
+      margin-top: 8px;
+      opacity: 0.85;
+    }
+    nav {
+      background: var(--blue-trust);
+      padding: 14px;
+      text-align: center;
+    }
+    nav a {
+      color: var(--white);
+      margin: 0 18px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.05em;
+    }
+    nav a:hover {
+      color: var(--red-love);
+    }
+    section {
+      margin: 40px auto;
+      max-width: 900px;
+      padding: 30px;
+      background: var(--beige);
+      border-radius: 14px;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.06);
+    }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: var(--red-dark);
+      font-size: 2.1em;
+      margin-top: 0;
+      text-align: center;
+    }
+    .read-btn {
+      display: block;
+      width: 240px;
+      margin: 20px auto;
+      background: var(--blue-trust);
+      color: var(--white);
+      padding: 14px 28px;
+      border: none;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 1.1em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+    .read-btn:hover {
+      background: var(--red-love);
+      transform: scale(1.05);
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      background: var(--white);
+      margin: 18px 0;
+      padding: 22px;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+    }
+    li:hover {
+      transform: translateY(-3px);
+    }
+    .title {
+      font-weight: 700;
+      font-size: 1.15em;
+      margin-bottom: 6px;
+    }
+    .title a {
+      color: var(--red-dark);
+      text-decoration: none;
+    }
+    .title a:hover {
+      color: var(--blue-trust);
+      text-decoration: underline;
+    }
+    .desc {
+      color: #555;
+      font-size: 0.98em;
+      margin: 8px 0;
+      font-weight: 300;
+    }
+    .date {
+      color: #777;
+      font-size: 0.88em;
+      font-style: italic;
+    }
+    .source {
+      color: var(--blue-trust);
+      font-weight: 600;
+    }
+    .api-note {
+      font-size: 0.85em;
+      color: #666;
+      text-align: center;
+      margin: 20px 0;
+      font-style: italic;
+    }
+    .lved-cta {
+      background: var(--white);
+      padding: 30px;
+      border-left: 6px solid var(--red-love);
+      border-radius: 12px;
+      margin: 40px auto;
+      max-width: 800px;
+      text-align: center;
+    }
+    .lved-cta h3 {
+      font-family: 'Playfair Display', serif;
+      color: var(--blue-trust);
+      font-size: 1.8em;
+      margin-top: 0;
+    }
+    .lved-cta p {
+      font-size: 1.05em;
+      margin: 12px 0;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--red-love);
+      color: var(--white);
+      padding: 14px 32px;
+      border-radius: 30px;
+      font-weight: 700;
+      text-decoration: none;
+      margin-top: 15px;
+      transition: 0.3s;
+    }
+    .cta-btn:hover {
+      background: var(--red-dark);
+    }
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2em; }
+      section { padding: 20px; }
+    }
   </style>
 </head>
 <body>
-  <header><h1>Generational Wealth 2025</h1><p>Latest on family offices, wealth transfer, dynasties, and inheritance</p></header>
+
+  <header>
+    <h1>Generational Wealth 2025</h1>
+    <p>From generation to heart — your story continues.</p>
+    <div class="tagline">Where love becomes legacy.</div>
+  </header>
+
   <nav>
     <a href="index.html">Home</a>
     <a href="estate-planning.html">Estate Planning</a>
     <a href="generational-wealth.html">Generational Wealth</a>
+    <a href="tips.html">Tips & LVED</a>
   </nav>
 
   <section>
     <h2>Latest 2025 Articles on Generational Wealth</h2>
-    <button class="read-btn" onclick="scrollToNews()">Read 2025 News</button>
+    <button class="read-btn" onclick="document.getElementById('news-container').scrollIntoView({behavior:'smooth'})">
+      Read 2025 News
+    </button>
+
     <div id="news-container">
       <ul id="news-list">
-        <!-- Static 2025 Articles (always show) -->
+        <!-- 10 Real 2025 Articles (Static, Always Show) -->
         <li>
           <div class="title"><a href="https://www.bpm.com/insights/generational-wealth-transfer/" target="_blank">Generational Wealth Transfer Tips for Family Offices</a></div>
-          <div class="desc">Discover how family offices can navigate the $124 trillion generational wealth transfer with estate and tax planning, preparing heirs for responsible stewardship amid evolving asset preferences like private equity and sustainable investing.</div>
+          <div class="desc">Discover how family offices navigate the $124 trillion transfer with estate planning, heir preparation, and sustainable investing in private equity.</div>
           <div class="date">Aug 14, 2025 | <span class="source">BPM</span></div>
         </li>
         <li>
           <div class="title"><a href="https://www.cunninghamlegal.com/dynasty-trusts-and-multi-generational-wealth/" target="_blank">Creating Dynasty Trusts and a Mindset for Multi-Generational Wealth</a></div>
-          <div class="desc">Explore Dynasty Trusts, Charitable Trusts, Inheritance Protection Trusts, and Family LLCs to protect and transfer multigenerational wealth, bypassing estate, gift, and GSTT taxes for savvy families.</div>
+          <div class="desc">Dynasty, Charitable, and Inheritance Protection Trusts bypass taxes and protect wealth across generations — a foundation for legacy continuity.</div>
           <div class="date">May 29, 2025 | <span class="source">CunninghamLegal</span></div>
         </li>
         <li>
           <div class="title"><a href="https://www.heritagelawwi.com/how-to-use-trusts-for-generational-wealth-transfer" target="_blank">How to Use Trusts for Generational Wealth Transfer</a></div>
-          <div class="desc">Dynasty trusts shield assets from estate taxes for multiple generations; spendthrift trusts control distributions, while revocable trusts offer flexibility—ideal for avoiding probate and minimizing taxes.</div>
+          <div class="desc">Dynasty and spendthrift trusts minimize taxes and probate; revocable trusts offer flexibility for controlled, loving distributions.</div>
           <div class="date">Jun 15, 2025 | <span class="source">Heritage Law Office</span></div>
         </li>
         <li>
           <div class="title"><a href="https://www.lombardodier.com/insights/2025/may/how-to-successfully-transfer-family-wealth.html" target="_blank">Family Wealth Transfer: Key Strategies</a></div>
-          <div class="desc">With $31 trillion expected to transfer in the next decade, inheritance planning requires open communication, mediators, and tailored strategies to avoid conflicts and ensure smooth generational handoffs.</div>
+          <div class="desc">$31 trillion to transfer in the next decade — open communication and tailored plans prevent conflict and preserve love.</div>
           <div class="date">May 20, 2025 | <span class="source">Lombard Odier</span></div>
         </li>
         <li>
-          <div class="title"><a href="https://investmentsandwealth.org/advisor-publications/blog/generational-wealth-transfer" target="_blank">In the Slip Stream of the Silver Tsunami: Generational Wealth Transfer</a></div>
-          <div class="desc">Navigate the $84T transfer with Roth IRAs, 529 plans, CRTs, and FLPs to minimize taxes; integrate behavioral coaching and family conversations for holistic planning in 2025.</div>
+          <div class="title"><a href="https://investmentsandwealth.org/advisor-publications/blog/generational-wealth-transfer" target="_blank">In the Slip Stream of the Silver Tsunami</a></div>
+          <div class="desc">$84T shift: Use Roth IRAs, 529s, and family conversations to ensure continuity beyond assets — into values and wisdom.</div>
           <div class="date">Feb 6, 2025 | <span class="source">Investments & Wealth Institute</span></div>
         </li>
         <li>
-          <div class="title"><a href="https://www.usatoday.com/story/money/personalfinance/2025/09/18/great-wealth-transfer-heirs-how-to-prepare/86040974007/" target="_blank">The Great Wealth Transfer's Begun: Are Heirs Ready? How to Prepare</a></div>
-          <div class="desc">$124T from Boomers through 2048 risks dissipation without communication; 70% of families lose wealth by generation two due to poor preparation—start with guidance and financial literacy.</div>
-          <div class="date">Sep 23, 2025 | <span class="source">USA Today</span></div>
-        </li>
-        <li>
-          <div class="title"><a href="https://aaronwealth.com/resources/dynasty-trusts-and-beyond-advanced-strategies-for-generational-wealth-preservation/" target="_blank">Dynasty Trusts and Beyond: Advanced Strategies for Generational Wealth Preservation</a></div>
-          <div class="desc">Leverage $13.99M exemptions in 2025 with dynasty trusts in states like Alaska or South Dakota; irrevocable life insurance and spousal access trusts ensure tax-efficient, long-term security.</div>
-          <div class="date">Feb 17, 2025 | <span class="source">Aaron Wealth Advisors</span></div>
-        </li>
-        <li>
-          <div class="title"><a href="https://tcmccabe.com/articles/wealth-transfer-strategies/" target="_blank">Wealth Transfer Strategies: How to Pass Generational Wealth to Your Family</a></div>
-          <div class="desc">Timing matters—gift now for tax-free growth or inherit for step-up basis; hold family meetings to align on inheritance amounts, responsibilities, and values for harmony.</div>
-          <div class="date">Jun 23, 2025 | <span class="source">TCMcCabe</span></div>
-        </li>
-        <li>
-          <div class="title"><a href="https://integrated-financial-group.com/resources/the-great-wealth-transfer-2025-building-multigenerational-relationships/" target="_blank">The Great Wealth Transfer 2025: Building Multigenerational Relationships</a></div>
-          <div class="desc">Gen X inherits $14T next decade, Millennials $46T over 25 years; host family meetings, offer free planning sessions to heirs, and position advisors as trusted resources for $85T total shift.</div>
-          <div class="date">Sep 9, 2025 | <span class="source">Integrated Financial Group</span></div>
-        </li>
-        <li>
-          <div class="title"><a href="https://hbkswealth.com/insights/building-generational-wealth-effective-and-efficient-transfer-to-future-generations/" target="_blank">Building Generational Wealth: Effective and Efficient Transfer to Future Generations</a></div>
-          <div class="desc">$13.99M exemption in 2025 allows tax-free transfers; use QCDs for IRA charity gifts up to $108K, and lifetime gifting to lock in appreciation outside estates.</div>
-          <div class="date">Feb 26, 2025 | <span class="source">HBK Sorce</span></div>
-        </li>
-        <!-- API-fetched articles will append here if available -->
-      </ul>
-      <div class="api-note">Additional articles fetched via NewsAPI (if any):</div>
-    </div>
-  </section>
-
-  <script>
-    // Scroll function for "Read 2025 News" button
-    function scrollToNews() {
-      document.getElementById('news-container').scrollIntoView({ behavior: 'smooth' });
-    }
-
-    // Your API key (safe for GitHub)
-    const API_KEY = '9472bbb5b26e470ba511ef20024e2832';
-    const allowed = ['localhost', '.github.io'];
-    if (!allowed.some(h => location.hostname.includes(h))) {
-      console.warn('API blocked');
-    } else {
-      async function loadNews() {
-        const query = '"generational wealth" OR "wealth transfer" OR "family office" OR dynasty OR inheritance';
-        const from = '2025-01-01';
-        const to = '2025-12-31';
-        const url = `https://newsapi.org/v2/everything?q=${query}&from=${from}&to=${to}&sortBy=publishedAt&pageSize=10&apiKey=${API_KEY}`;
-        try {
-          const res = await fetch(url);
-          const data = await res.json();
-          if (data.articles && data.articles.length > 0) {
-            appendArticles(data.articles);
-          } else {
-            document.querySelector('.api-note').innerHTML = '<div class="warning">No additional 2025 articles found via API.</div>';
-          }
-        } catch {
-          document.querySelector('.api-note').innerHTML = '<div class="warning">API fetch failed—using static 2025 content.</div>';
-        }
-      }
-
-      function appendArticles(articles) {
-        const ul = document.getElementById('news-list');
-        const note = document.querySelector('.api-note');
-        note.innerHTML = `Found ${articles.length} more 2025 articles via API:`;
-        articles.forEach(a => {
-          const li = document.createElement('li');
-          const date = new Date(a.publishedAt).toLocaleDateString('en-US', {year:'numeric', month:'short', day:'numeric'});
-          li.innerHTML = `<div class="title"><a href="${a.url}" target="_blank">${a.title}</a></div>
-                          <div class="desc">${a.description || 'No description.'}</div>
-                          <div class="date">Published: ${date} | <span class="source">${a.source.name}</span></div>`;
-          ul.appendChild(li);
-        });
-      }
-
-      // Load API on page ready
-      loadNews();
-    }
-  </script>
-</body>
-</html>
+          <div class="title"><a href="https://www.usatoday.com/story/money/personalfinance/2025/09/18/great-wealth-transfer-heirs-how-to-prepare/86040974007/" target="_blank">The Great Wealth Transfer Has Begun</a></div>
+          <div class="desc">$124T at
