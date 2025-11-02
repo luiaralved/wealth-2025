@@ -12,16 +12,20 @@
     nav a:hover{text-decoration:underline}
     section{margin:20px 0;padding:20px;background:#fff;border-radius:8px;box-shadow:0 0 10px rgba(0,0,0,.1)}
     h1,h2{color:#333}
+    .read-btn{background:#007bff;color:#fff;padding:10px 20px;border:none;border-radius:5px;cursor:pointer;font-size:1.1em;margin:10px 0;transition:background .3s}
+    .read-btn:hover{background:#0056b3}
     ul{list-style:none;padding:0}
-    li{margin:15px 0;padding-bottom:15px;border-bottom:1px solid #eee}
-    .title{font-weight:bold}
-    .desc{color:#666;font-size:0.95em}
+    li{margin:15px 0;padding:15px;border-bottom:1px solid #eee;background:#f9f9f9;border-radius:5px}
+    .title{font-weight:bold;font-size:1.1em}
+    .desc{color:#666;font-size:0.95em;margin:5px 0}
     .date{color:#999;font-size:0.9em}
+    .source{font-style:italic;color:#007bff}
     .warning{color:#d9534f}
+    .api-note{font-size:0.8em;color:#999;text-align:center;margin:10px 0}
   </style>
 </head>
 <body>
-  <header><h1>Estate Planning 2025</h1></header>
+  <header><h1>Estate Planning 2025</h1><p>Latest on wills, trusts, probate, and tax laws</p></header>
   <nav>
     <a href="index.html">Home</a>
     <a href="estate-planning.html">Estate Planning</a>
@@ -30,40 +34,111 @@
 
   <section>
     <h2>Latest 2025 Articles on Estate Planning</h2>
-    <ul id="news-list"><li>Loading 2025 articles...</li></ul>
+    <button class="read-btn" onclick="scrollToNews()">Read 2025 News</button>
+    <div id="news-container">
+      <ul id="news-list">
+        <!-- Static 2025 Articles (always show) -->
+        <li>
+          <div class="title"><a href="https://lawgroupofiowa.com/blog/iowa-inheritance-tax-ends-in-2025/" target="_blank">Iowa Inheritance Tax Ends In 2025</a></div>
+          <div class="desc">The repeal offers a moment to reset estate planning goals with wills, trusts, and powers of attorney—guiding clients through tax implications and updates.</div>
+          <div class="date">Jul 31, 2025 | <span class="source">Law Group of Iowa</span></div>
+        </li>
+        <li>
+          <div class="title"><a href="https://www.citizensbank.com/private-banking/insights/estate-planning-2025-prepare-for-potential-tax-law-changes.aspx" target="_blank">Estate Planning 2025: Prepare for Potential Tax Law Changes</a></div>
+          <div class="desc">Contribute assets to irrevocable trusts to remove them from taxable estates; revocable trusts avoid probate for smoother administration.</div>
+          <div class="date">Apr 29, 2025 | <span class="source">Citizens Bank</span></div>
+        </li>
+        <li>
+          <div class="title"><a href="https://www.certaintynews.com/article/wills-and-trusts-tools-for-estate-planning-and-tax-efficiency-in-2025" target="_blank">Wills and Trusts: Tools for Estate Planning and Tax Efficiency in 2025</a></div>
+          <div class="desc">Align estate strategy with tax planning before the exemption decreases post-2025; revocable trusts streamline probate, irrevocable ones reduce taxes.</div>
+          <div class="date">Apr 7, 2025 | <span class="source">Certainty News</span></div>
+        </li>
+        <li>
+          <div class="title"><a href="https://www.annuity.org/retirement/estate-planning/" target="_blank">2025 Estate Planning Checklist</a></div>
+          <div class="desc">Transfer up to $13.99M tax-free in 2025; list beneficiaries, estimate assets, and use trusts/annuities for tax-efficient inheritance.</div>
+          <div class="date">Aug 6, 2025 | <span class="source">Annuity.org</span></div>
+        </li>
+        <li>
+          <div class="title"><a href="https://www.clarkewillmott.com/legal-services/wills-and-probate-solicitors/trusts-inheritance-tax-planning/" target="_blank">Trusts & Inheritance Tax Planning Solicitors</a></div>
+          <div class="desc">Maximize business relief from inheritance tax via Wills and trusts; specialist advice for complex assets in the UK and overseas.</div>
+          <div class="date">Jul 17, 2025 | <span class="source">Clarke Willmott</span></div>
+        </li>
+        <li>
+          <div class="title"><a href="https://investor.vanguard.com/investor-resources-education/taxes/inheritance-taxes" target="_blank">Understanding Inheritance Taxes</a></div>
+          <div class="desc">Gift up to $19K annually tax-free in 2025; use irrevocable trusts to reduce estate value and minimize inheritance taxes.</div>
+          <div class="date">2025 (Ongoing) | <span class="source">Vanguard</span></div>
+        </li>
+        <li>
+          <div class="title"><a href="https://taxfoundation.org/data/all/state/estate-inheritance-taxes/" target="_blank">Estate and Inheritance Taxes by State, 2025</a></div>
+          <div class="desc">Connecticut conforms to federal $13.99M exemption; New York excludes $7.16M—key for state-specific probate and trust planning.</div>
+          <div class="date">Oct 27, 2025 | <span class="source">Tax Foundation</span></div>
+        </li>
+        <li>
+          <div class="title"><a href="https://www.usbank.com/wealth-management/financial-perspectives/trust-and-estate-planning/estate-taxes.html" target="_blank">Estate Taxes: Who Pays, How Much and When</a></div>
+          <div class="desc">$13.99M exemption in 2025; use irrevocable trusts or charitable giving to reduce liability on wills and probate assets.</div>
+          <div class="date">Jul 22, 2025 | <span class="source">U.S. Bank</span></div>
+        </li>
+        <li>
+          <div class="title"><a href="https://www.investopedia.com/terms/i/inheritancetax.asp" target="_blank">Inheritance Tax: What It Is, How It's Calculated, and Who Pays It</a></div>
+          <div class="desc">Six states (incl. Iowa phasing out) impose inheritance tax in 2025; trusts avoid probate and schedule distributions for minors.</div>
+          <div class="date">Aug 27, 2025 | <span class="source">Investopedia</span></div>
+        </li>
+        <li>
+          <div class="title"><a href="https://taxscape.deloitte.com/article/inheritance-tax--wills-and-inheritance-tax.aspx" target="_blank">Inheritance Tax: Wills and Inheritance Tax</a></div>
+          <div class="desc">IPDI trusts avoid 10-year IHT charges; discretionary will trusts keep assets out of beneficiaries' estates for tax efficiency.</div>
+          <div class="date">2025 (Ongoing) | <span class="source">Deloitte TaxScape</span></div>
+        </li>
+        <!-- API-fetched articles will append here if available -->
+      </ul>
+      <div class="api-note">Additional articles fetched via NewsAPI (if any):</div>
+    </div>
   </section>
 
   <script>
+    // Scroll function for "Read 2025 News" button
+    function scrollToNews() {
+      document.getElementById('news-container').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Your API key (safe for GitHub)
     const API_KEY = '9472bbb5b26e470ba511ef20024e2832';
     const allowed = ['localhost', '.github.io'];
     if (!allowed.some(h => location.hostname.includes(h))) {
-      document.getElementById('news-list').innerHTML = '<li class="warning">News blocked – API key protected.</li>';
+      console.warn('API blocked');
     } else {
       async function loadNews() {
-        const query = 'estate planning OR trust OR will OR probate OR inheritance tax';
+        const query = 'estate planning OR trust OR will OR probate OR "inheritance tax"';
         const from = '2025-01-01';
         const to = '2025-12-31';
-        const url = `https://newsapi.org/v2/everything?q=${query}&from=${from}&to=${to}&sortBy=publishedAt&pageSize=20&apiKey=${API_KEY}`;
+        const url = `https://newsapi.org/v2/everything?q=${query}&from=${from}&to=${to}&sortBy=publishedAt&pageSize=10&apiKey=${API_KEY}`;
         try {
           const res = await fetch(url);
           const data = await res.json();
-          display(data.articles || []);
+          if (data.articles && data.articles.length > 0) {
+            appendArticles(data.articles);
+          } else {
+            document.querySelector('.api-note').innerHTML = '<div class="warning">No additional 2025 articles found via API.</div>';
+          }
         } catch {
-          document.getElementById('news-list').innerHTML = '<li class="warning">Failed to load news.</li>';
+          document.querySelector('.api-note').innerHTML = '<div class="warning">API fetch failed—using static 2025 content.</div>';
         }
       }
-      function display(articles) {
-        const ul = document.getElementById('news-list'); ul.innerHTML = '';
-        if (!articles.length) { ul.innerHTML = '<li>No 2025 articles found.</li>'; return; }
+
+      function appendArticles(articles) {
+        const ul = document.getElementById('news-list');
+        const note = document.querySelector('.api-note');
+        note.innerHTML = `Found ${articles.length} more 2025 articles via API:`;
         articles.forEach(a => {
           const li = document.createElement('li');
           const date = new Date(a.publishedAt).toLocaleDateString('en-US', {year:'numeric', month:'short', day:'numeric'});
           li.innerHTML = `<div class="title"><a href="${a.url}" target="_blank">${a.title}</a></div>
-                          <div class="desc">${a.description||'No description.'}</div>
-                          <div class="date">Published: ${date} | ${a.source.name}</div>`;
+                          <div class="desc">${a.description || 'No description.'}</div>
+                          <div class="date">Published: ${date} | <span class="source">${a.source.name}</span></div>`;
           ul.appendChild(li);
         });
       }
+
+      // Load API on page ready
       loadNews();
     }
   </script>
